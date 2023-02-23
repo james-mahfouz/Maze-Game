@@ -20,21 +20,21 @@ window.onload = function() {
             boundaries[i].addEventListener('mouseover', function() {
                 if (status.innerHTML=="Game Started"){
                     console.log("lose")
-                }  
-                status.innerHTML = "You Lose"
-                for(var j = 0; j<boundaries.length; j++){
+                    for(var j = 0; j<boundaries.length; j++){
                         boundaries[j].classList.add('youlose')    
-                }
+                    }
+                    status.innerHTML = "You Lose"
+                }  
+                
             })
         }  
         
         end.addEventListener('mouseover', function(){
-            console.log("hello end")
             if (status.innerHTML == "Game Started"){
                 console.log("win")
-                
+                status.innerHTML = "You Win"
             }  
-            status.innerHTML = "You Win"         
+                     
         })
     }) 
 }
