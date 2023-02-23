@@ -52,6 +52,7 @@ window.onload = function() {
                 score.innerHTML = parseInt(score.innerHTML) + 5
                 console.log("win")//for debugging reason
                 status.innerHTML = "You Win"
+                body.style.backgroundColor = 'green'; 
             }                       
         })
     }) 
