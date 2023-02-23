@@ -8,8 +8,10 @@ window.onload = function() {
         console.log("Game has started")
         for (var i = 0; i < boundaries.length; i++) {
             boundaries[i].addEventListener('mouseover', function() {
-              // Code to execute when the mouse hovers over the boundary element
-              console.log('Mouse is hovering over a boundary element!');
+                console.log('Mouse is hovering over a boundary element!');
+                for(var j = 0; j<boundaries.length; j++){
+                    boundaries[j].classList.add('youlose')
+                }
             });
           }
     })
