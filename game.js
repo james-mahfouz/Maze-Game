@@ -11,8 +11,10 @@ window.onload = function() {
     score.innerHTML = 0
 
     //when the mouse hover over the start dive the following apply
-    start.addEventListener('mouseover', function(){
+    start.addEventListener('mouseover', function(e){
         status.innerHTML = "Game Started"
+        
+        
 
         game.addEventListener('mouseleave', function(){
             if (status.innerHTML=="Game Started"){
