@@ -4,7 +4,7 @@ window.onload = function() {
     var start = document.getElementById('start')
     var boundaries = document.getElementsByClassName('boundary')
     var status =document.getElementsByClassName('example')[0]
-    var end = document.getElementById('End')
+    var end = document.getElementById('end')
 
     //when the mouse hover over the start dive the following apply
     start.addEventListener('mouseover', function(){
@@ -29,10 +29,12 @@ window.onload = function() {
         }  
         
         end.addEventListener('mouseover', function(){
+            console.log("hello end")
             if (status.innerHTML == "Game Started"){
                 console.log("win")
-                status.innerHTML = "You Win"
-            }           
+                
+            }  
+            status.innerHTML = "You Win"         
         })
     }) 
 }
