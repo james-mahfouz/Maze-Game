@@ -12,20 +12,19 @@ window.onload = function() {
     start.addEventListener('mouseover', function(){
         
         status.innerHTML = "Game Started"
-
-        //when the mouse hover over start 
+        
+        //when the mouse hover over start to remove the wall color if available
         for(var j = 0; j<boundaries.length; j++){
             boundaries[j].classList.remove('youlose')
         }
 
+        //when mouse hover over boundaries
         for (var i = 0; i < boundaries.length; i++) {         
             boundaries[i].addEventListener('mouseover', function() {
                 if (status.innerHTML=="Game Started"){
                     score.innerHTML = parseInt(score.innerHTML) -10
                     console.log("lose")
-                    for(var j = 0; j<boundaries.length; j++){
-                        boundaries[j].classList.add('youlose')    
-                    }
+                    
                     status.innerHTML = "You Lose"
                 }  
                 
