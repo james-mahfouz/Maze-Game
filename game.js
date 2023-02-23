@@ -40,5 +40,9 @@ window.onload = function() {
             }                       
         })
     }) 
+
+    start.addEventListener('click', function(){
+        score.innerHTML = 0
+    })
 }
   
