@@ -1,25 +1,28 @@
+//code to wait for the html to load before starting the script
 window.onload = function() {
+    //creating variable and assigning elements by searching for IDs and class name
     var start = document.getElementById('start')
-    var status = document.getElementById('status')
     var boundaries = document.getElementsByClassName('boundary')
+    var winorlose =document.getElementsByClassName('example')[0]
 
-
-    start.addEventListener('click', function(){
-        console.log("Game has started")
+    //when the mouse hover over the start dive the following apply
+    start.addEventListener('mouseover', function(){
+        winorlose.innerHTML = "Game Started"
+        //when the mouse hover over start 
+        for(var j = 0; j<boundaries.length; j++){
+            boundaries[j].classList.remove('youlose')
+        }
 
         for (var i = 0; i < boundaries.length; i++) {
             boundaries[i].addEventListener('mouseover', function() {
-                console.log('Mouse is hovering over a boundary element!');
+                winorlose.innerHTML = "You Lose"
+                console.log("loss")
                 for(var j = 0; j<boundaries.length; j++){
-                    boundaries[j].classList.add('youlose')
+                    boundaries[j].classList.add('youlose')    
                 }
             })
         }
-        start.addEventListener('mouseover', function(){
-            for(var j = 0; j<boundaries.length; j++){
-                boundaries[j].classList.remove('youlose')
-            }
-        })
+        
     })
   }
   
